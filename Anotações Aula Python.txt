@@ -1,0 +1,191 @@
+Mensagens no python usa aspas simples ('Olá mundo')
+
+print('Olá mundo') -> ESCREVE NA TELA Olá Mundo
+print(7 + 4) ESCREVE NA TELA 11
+print('7' + '4') JUNTA OS NUMEROS 74
+
+FUNÇÃO DE ENTRADA DE DADOS:
+
+nome = input('Qual seu nome: ')
+print('Boas vindas', nome)
+
+TIPOS PRIMITIVOS E SAIDA DE DADOS:
+
+INT -> números inteiros
+FLOAT -> números flutuantes
+BOOLEANO -> verdadeiro ou falso
+STR / STRING -> palavras entre aspas
+
+Teste->
+	n1 = int(input('Digite um valor: '))
+	n2 = int(input('Digite outro valor: '))
+	s = n1 + n2
+	print('A soma entre {} e {} vale {}'.format(n1, n2, s))
+
+	n = float(input('Digite um numero: '))
+	print(n)
+	print(type(n))
+
+	n = bool(input('Digite um numero: '))
+	print(n)
+	print(type(n))
+
+	n = str(input('Digite um numero: '))
+	print(n)
+	print(type(n))
+
+OPERAÇÕES ARITMETICAS:
+
++ Adição
+- Subtração
+* Multiplicação
+/ Divisão
+** Potência
+// Divisão Inteira
+% Resto da Divisão
+
+Ordem de Precedência -> 1: ()
+			2: **
+			3: * / // %
+			4: + -
+
+ Exemplos ->
+
+	#Quebrar linha \n
+	#Deixar dois Prints na mesma linha (end='')
+	n1 = int(input('Um valor: '))
+	n2 = int(input('Outro valor: '))
+	s = n1 + n2
+	m = n1 * n2
+	d = n1 / n2
+	di = n1 // n2
+	e = n1 ** n2
+	print('A soma e {}, o produto e {} e a divisão e {:.3f}'.format(s, m, d))
+	print('Divisão inteira {} e potencia {}'.format(di, e))
+
+	print(81**(1/2)) #Raiz Quadrada de 81
+	print(25**(1/2)) #Raiz Quadrada de 25
+	print(127**(1/3)) #Raiz Cubica de 127
+
+
+PORCENTAGEM: 0.05 * 100 = 5
+	     10 * 5 / 100 = 0.5 cinco porcento de dez
+	     875 * 15 / 100 = 131.25 quinze porcento de 875
+
+Exemplo: novo_salario = salario + (salario * 15 / 100) --->> Aumento de 15%
+	  novo_salario = salario - (salario * 5 / 100 ) --->> Desconto de 5%
+
+Python Modulos --->>>
+
+import -> Importa Bibliotecas
+math ->  Biblioteca de funções matematicas
+from math import sqrt -->> importa uma unica função da biblioteca que ira utilizar
+
+#Exemplos da aula modulos
+	import math
+	num = int(input('Digite um numero: '))
+	raiz = math.sqrt(num)
+	print('A raiz de {} e igual a {}'.format(num, math.ceil(raiz)))#ceil arredonda pra cima
+	print('A raiz de {} e igual a {}'.format(num, math.floor(raiz)))#floor arredonda pra baixo
+	print('A raiz de {} e igual a {:.2f}'.format(num, raiz))
+
+#Exemplos da aula modulos
+	import random
+	num = random.randint(1, 10)
+	print(num)
+
+
+MANIPULANDO TEXTO:
+
+Fatiamento  de String 
+Exemplo:
+	frase[9:20]
+
+C U R S O E M V I D E O
+1 2 3 4 5 6 7 8 9 10 11 12
+
+Exemplo: 
+	frase[9::3] -->> pula de tres em tres
+	len(frase) -->> conta quantos caracteres
+	frase.count('o') -->> conta quantos 'o' tem na frase
+	frase.find('deo') -->> mostra onde começa na posição
+	'curso' in frase -->> se existe curso na frase
+	frase.replace('Python', 'Android') -->> substitui a palavra por outra
+	frase.upper() -->> tudo em maiusculo
+	frase.lower() -->> tudo em minusculo
+	frase.capitalize() -->> a primeira letra em maiusculo
+	frase.title() -->>
+	frase.strip() -->> remove os espaços da direita e esquerda
+	frase.split() -->> refaz a frase e coloca numa nova lista divida a string em 	uma lista
+	'-'.join(frase) -->> ele ajunta a frase e vai colocar o '-' 
+	
+
+Aula 10 - Condições
+
+	Exemplo: Se carro.esquerda()
+		   bloco_v_
+		 Senao 
+	           bloco_f_
+
+	Em Python: if carro.esquerda():
+			bloco True
+		   else:
+			bloco False
+
+	Exemplo:
+		tempo = int(input('Quantos anos tem seu carro?))
+		if tempo <= 3:
+		   print('Carro Novo')
+		else:
+		   print('Carro Velho')
+		print('FIM')
+
+	Exemplo Simplificado:
+		tempo = int(input('Quantos anos tem seu carro?'))
+		print('Carro Novo' if tempo <= 3 else 'Carro Velho')
+		print('FIM')
+
+
+AULA 11: CORES NO TERMINAL
+
+Ansi escape sequence
+\033['style' 'text' 'back' m  -> código da cor
+\033[  0    :  33  :  44   m  -> exemplo
+
+Style --> 0 - nine
+	  1 - bold
+	  4 - underline
+	  7 - negative
+
+Text --> 30-branco, 31-vermelho, 32-verde, 33-amarelo, 34-azul, 35-roxo, 36-lilas, 37-cinza
+
+Back --> 40-branco, 41-vermelho, 42-verde, 43-amarelo, 44-azul, 45-roxo, 46-lilas, 47-cinza
+
+exemplo: print('\33[1;31;43m Olá, Mundo!!!')
+	 print('\33[1;31;43m Olá, Mundo!!!\033[m')
+
+
+AULA 12 - CONDIÇÕES ANINHADAS
+
+
+Estruturas condicionais aninhadas ocorrem quando duas ou mais estruturas condicionais são colocadas
+uma dentro da outra
+
+Estrutura:
+	if, elif, else
+
+Exemplo: 
+	if carro.esquerda():
+	   bloco1
+	elif carro.direita():
+	   bloco2
+	else:
+	   bloco3
+
+
+
+
+
+
+
+
