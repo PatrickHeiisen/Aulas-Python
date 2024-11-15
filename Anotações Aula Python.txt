@@ -167,7 +167,6 @@ exemplo: print('\33[1;31;43m Olá, Mundo!!!')
 
 AULA 12 - CONDIÇÕES ANINHADAS
 
-
 Estruturas condicionais aninhadas ocorrem quando duas ou mais estruturas condicionais são colocadas
 uma dentro da outra
 
@@ -182,10 +181,45 @@ Exemplo:
 	else:
 	   bloco3
 
+AULA 13 - ESTRUTURA DE REPETIÇÃO 'FOR', ESTRUTURA DE LAÇO:
+		
+	Exemplo:
+		for c in range(1,10)
+			passo --> exemplo
+		pega --> exemplo
 
 
+ESTRUTURA DENTRO DA OUTRA:
 
+	Exemplo:
+		for c in range(0,3):
+		   if moeda:
+		      pega
+		    passo
+		    pula
+		passo
+		pega
 
+num % 2 == 0: # para saber se o numero e par
+num % 1 == 0: # para saber se o numero e impar
 
+AULA 14 - ESTRUTURA DE REPETIÇÃO WHILE
 
-
+Exemplo:
+	while no apple:
+		passo
+	pega
+Exemplo2: em portugal
+	enquanto nao maca
+	  se chao
+	    passo
+	  se semchao
+	    pula
+	  se moeda
+	    pega
+	pega
+	
+n = 1
+while n != 0:
+    n = int(input('Digite um valor: '))
+print('FIM')
