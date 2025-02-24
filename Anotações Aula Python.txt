@@ -223,3 +223,57 @@ n = 1
 while n != 0:
     n = int(input('Digite um valor: '))
 print('FIM')
+
+AULA 15:INTERROMPENDO REPETIÇÕES
+
+Exemplo pega maça laço while:
+enquando maça
+   se bloco
+	passo
+   se buraco
+	pula
+   se moeda
+	pega
+pega
+
+Exemplo python com comando interromper:
+
+while True:
+  if bloco
+	passo
+  if buraco
+	pula
+  if moeda
+	pega
+  if trofeu
+	pula
+	break --->> Comando que interrompe o codigo, joga pra fora e para o codigo
+pega
+
+Exemplo 2:
+
+n = s = 0
+while True:
+    n = int(input('Digite um numero: '))
+    if n == 999:
+        break
+    s += n
+print('A soma vale {}'.format(s))
+
+'f' STRING NOVO MODO DE FORMATA:
+print('A soma vale {}'.format(s))
+print(f'A soma vale {s}')
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
